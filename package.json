@@ -1,18 +1,19 @@
 {
   "name": "bq-api-node",
   "version": "1.0.0",
-  "description": "",
+  "description": "## 1. Preâmbulo",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "dev": "nodemon  --exec babel-node ./api/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vivian Caldas",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "install": "^0.13.0",
     "jest": "^24.9.0",
     "nodemon": "^2.0.2",
     "path": "^0.12.7",
@@ -33,5 +34,13 @@
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.19.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vhcaldas/SAP003-burger-queen-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vhcaldas/SAP003-burger-queen-api/issues"
+  },
+  "homepage": "https://github.com/vhcaldas/SAP003-burger-queen-api#readme"
 }

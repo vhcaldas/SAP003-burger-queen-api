@@ -6,5 +6,5 @@ const getAll = async (req, res) => {
 };
 
 export default {
-    getAll
+    getAll,
 }

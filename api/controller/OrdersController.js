@@ -1,5 +1,5 @@
 const orderService = require('../../services/orderService');
-const Utils = require('../Utils/Utils');
+import Utils from '../Utils/Utils';
 
 const util = new Utils();
 

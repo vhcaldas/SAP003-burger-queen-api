@@ -1,4 +1,5 @@
 export default class Utils {
+    
     constructor() {
         this.statusCode = null
         this.type = null

@@ -2,11 +2,11 @@ import { Router } from 'express'
 import TableController from '../controller/TablesController';
 
 const tablesRouter = Router()
-router.get('/', TableController.getAllTables)
-router.post('/', TableController.addTable)
-router.get('/:id', TableController.getaddTable)
-router.put('/:id', TableController.updatedTable)
-router.delete('/:id', TableController.deleteTable)
+tablesRouter.get('/', TableController.getAllTables)
+tablesRouter.post('/', TableController.addTable)
+tablesRouter.get('/:id', TableController.getaddTable)
+tablesRouter.put('/:id', TableController.updatedTable)
+tablesRouter.delete('/:id', TableController.deleteTable)
 
 export default tablesRouter
 

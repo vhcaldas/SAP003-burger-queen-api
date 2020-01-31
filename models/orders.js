@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.STRING
   }, {});
   orders.associate = function(models) {
-    orders.hasMany(models.Products)
-    orders.belongsTo(models.Tables)
+    orders.hasMany(models.products)
+    orders.belongsTo(models.tables)
   };
   return orders;
 };

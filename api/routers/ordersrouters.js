@@ -1,11 +1,11 @@
 import { Router } from 'express'
 import OrderController from '../controller/OrdersController';
 
-const router = Router()
+const ordersRouter = Router()
 router.get('/', OrderController.getAllOrders)
 router.post('/', OrderController.addOrder)
 router.get('/:id', OrderController.getaddOrder)
 router.put('/:id', OrderController.updatedOrder)
 router.delete('/:id', OrderController.deleteOrder)
 
-export default router
+export default ordersRouter;

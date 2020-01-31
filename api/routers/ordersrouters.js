@@ -4,7 +4,7 @@ import OrderController from '../controller/OrdersController';
 const ordersRouter = Router()
 ordersRouter.get('/', OrderController.getAllOrders)
 ordersRouter.post('/', OrderController.addOrder)
-ordersRouter.get('/:id', OrderController.getaddOrder)
+ordersRouter.get('/:id', OrderController.getOrder)
 ordersRouter.put('/:id', OrderController.updatedOrder)
 ordersRouter.delete('/:id', OrderController.deleteOrder)
 

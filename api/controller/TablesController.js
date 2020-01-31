@@ -1,4 +1,4 @@
-const tableServices = require('../services/tablesServices');
+const tableServices = require('../../services/tablesService');
 const Utils = require('../Utils/Utils');
 
 const util = new Utils();

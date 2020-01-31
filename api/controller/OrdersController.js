@@ -1,4 +1,4 @@
-const orderService = require('../services/orderServices');
+const orderService = require('../../services/orderService');
 const Utils = require('../Utils/Utils');
 
 const util = new Utils();

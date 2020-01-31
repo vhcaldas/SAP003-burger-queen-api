@@ -1,4 +1,4 @@
-const productsService = require('../services/itemsServices');
+const productsService = require('../../services/productsService');
 const Utils = require('../Utils/Utils');
 
 const util = new Utils();

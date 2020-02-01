@@ -20,7 +20,7 @@ class OrdersController {
     }
 
     static async addOrder(req, res) {
-        if (!req.body.name || !typeof (req.body.is_alive) === 'boolean') {
+        if (!req.body.clientName || !req.body.id_desk || !req.body.time || !req.body.finalTime || !req.body.totalPrice || !req.body.status) {
             util.setError(400, 'Please provide complete details')
             return util.send(res)
         }

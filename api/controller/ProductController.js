@@ -1,12 +1,12 @@
-const productsService = require('../../services/productsService');
-import Utils from '../Utils/Utils';
+const ProductService = require('../../services/productsService')
+import Util from '../Utils/Utils';
 
-const util = new Utils();
+const util = new Util()
 
-class ProductsController {
-    static async getAllProducts(res) {
+class ProductController {
+    static async getAllProducts(req, res) {
         try {
-            const allProducts = await productsService.getAllProducts()
+            const allProducts = await ProductService.getAllProducts()
             if (allProducts.length > 0) {
                 util.setSuccess(200, 'Products retrieved', allProducts)
             } else {
@@ -20,13 +20,14 @@ class ProductsController {
     }
 
     static async addProduct(req, res) {
-        if (!req.body.name || !req.body.price || !req.body.breakfast || !req.body.isExtras || !req.body.hasOptions) {
+        console.log(req.body);
+        if (!req.body.name || !req.body.price || !req.body.type) {
             util.setError(400, 'Please provide complete details')
             return util.send(res)
         }
         const newProduct = req.body
         try {
-            const createdProduct = await productsService.addProduct(newProduct)
+            const createdProduct = await ProductService.addProduct(newProduct)
             util.setSuccess(201, 'Product Added!', createdProduct)
             return util.send(res)
         } catch (error) {
@@ -43,7 +44,7 @@ class ProductsController {
             return util.send(res)
         }
         try {
-            const updateProduct = await productsService.updateProduct(id, alteredProduct)
+            const updateProduct = await ProductService.updateProduct(id, alteredProduct)
             if (!updateProduct) {
                 util.setError(404, `Cannot find Product with the id: ${id}`)
             } else {
@@ -65,7 +66,7 @@ class ProductsController {
         }
 
         try {
-            const theProduct = await productsService.getProduct(id)
+            const theProduct = await ProductService.getProduct(id)
 
             if (!theProduct) {
                 util.setError(404, `Cannot find Product with the id ${id}`)
@@ -88,7 +89,7 @@ class ProductsController {
         }
 
         try {
-            const ProductToDelete = await productsService.deleteProduct(id)
+            const ProductToDelete = await ProductService.deleteProduct(id)
 
             if (ProductToDelete) {
                 util.setSuccess(200, 'Product deleted')
@@ -103,4 +104,4 @@ class ProductsController {
     }
 }
 
-export default ProductsController;
+export default ProductController;

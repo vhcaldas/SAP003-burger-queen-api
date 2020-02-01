@@ -29,9 +29,9 @@ export default class Util {
         if (this.type === 'success') {
             return res.status(this.statusCode).json(result)
         }
-        return res.status(this.statusCode).json({
-            status: this.type,
-            message: this.message,
+        return res.status(this.statusCode).json(() => {
+            return {status: this.type,
+            message: this.message,}
         })
     }
 }

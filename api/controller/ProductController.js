@@ -20,7 +20,7 @@ class ProductsController {
     }
 
     static async addProduct(req, res) {
-        if (!req.body.name || !typeof (req.body.is_alive) === 'boolean') {
+        if (!req.body.name || !req.body.price || !req.body.breakfast || !req.body.isExtras || !req.body.hasOptions) {
             util.setError(400, 'Please provide complete details')
             return util.send(res)
         }
@@ -103,4 +103,4 @@ class ProductsController {
     }
 }
 
-export default ProductsController
+export default ProductsController;

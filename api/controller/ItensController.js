@@ -20,7 +20,7 @@ class ItemsController {
     }
 
     static async addItem(req, res) {
-        if (!req.body.id_product || !req.body.id_orders || req.body.quantity || req.body.options || req.body.id_extras) {
+        if (!req.body.id_product || !req.body.id_orders || !req.body.quantity || !req.body.options || !req.body.id_extras) {
             util.setError(400, 'Please provide complete details')
             return util.send(res)
         }

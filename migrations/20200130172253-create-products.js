@@ -12,16 +12,12 @@ module.exports = {
         type: Sequelize.STRING
       },
       price: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
-      isExtras: {
-        type: Sequelize.BOOLEAN
-      },
-      hasOptions: {
-        type: Sequelize.STRING
-      },
-      breakfast: {
-        type: Sequelize.BOOLEAN
+      type: {
+        type: DataTypes.STRING, 
+        allowNull: false
       },
       createdAt: {
         allowNull: false,

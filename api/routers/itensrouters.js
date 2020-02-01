@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import ItemController from '../../api/controller/ItensController';
 
+
 const itensRouter = Router()
 itensRouter.get('/', ItemController.getAllItems);
 itensRouter.post('/', ItemController.addItem);

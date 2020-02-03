@@ -1,12 +1,6 @@
 # Burger Queen - Back-end
 
-## 1. Preâmbulo
-
-O front-end da aplicação Burger Queen já está criado, agora precisamos de um back-end para manejar os dados.
-
-Neste caso, isso será feito através de uma _API rest_ que será compatível com as requisições vindas do front.
-
-## 2. Resumo do projeto
+## 1. Resumo do projeto
 
 Como back-end, nesse caso nos referimos a um _servidor web_, que é basicamente um programa que _ouve_ o que acontece na aplicação através de uma porta de rede, pela qual podemos enviar _requisições_ (_requests_) e obter _respostas_ (_responses_).
 
@@ -19,7 +13,7 @@ Neste projeto vamos partir de um _boilerplate_ que já contém a estrutura bási
 
 Você vai perceber que, entre os arquivos, incluímos um `docker-compose.yml`. Isso significa que, neste projeto, vamos utilizar os serviços de "containerização" do _Docker_. Resumindo: Um serviço de container, como _Docker_ ou _Kubernetes_, serve para, principalmente, garantir que os ambientes de desenvolvimento e produção sejam exatamente os mesmos, não importa em que sistemas operacional/versão funciona o computador da desenvolvedora. O _Docker_ cria uma máquina virtual onde podemos definir sistema operacional e versões de softwares, entre outras coisas, e é dentro de uma dessas máquinas que vamos testar e executar nossos projetos :)
 
-Recomendamos também o uso do [Postman](https://www.getpostman.com) para você testar suas rotas, ele vai te ajudar a ter um "visual" das requisições e você também pode utilizá-lo para enviar dados através do _header_ e _body_. 
+Recomendamos também o uso do [Postman](https://www.getpostman.com) para teste de rotas, ele vai te ajudar a ter um "visual" das requisições e você também pode utilizá-lo para enviar dados através do _header_ e _body_. 
 
 ## 3. Objetivos de aprendizagem
 
